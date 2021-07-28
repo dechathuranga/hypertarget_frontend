@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -97,11 +98,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 18,
         margin: 'center',
         marginTop: 55,
-        borderRadius: 60,
         // marginBottom: 25,
-        // align: 'center',
-        color: 'black',
-        background: '##24285B',
         fontWeight: 'bold',
     },
     textHead: {
@@ -150,20 +147,57 @@ const useStyles = makeStyles((theme) => ({
         height: 60,
         marginLeft: '40%',
     },
-    buttonSelect: {
+    buttonSelectM: {
         fontSize: 18,
         margin: 'center',
         borderRadius: 20,
-        background: '#24285B',
-        // align: 'center',
-        // color: 'black',
-        // marginBottom: 80,
         marginTop: 10,
         marginLeft: '6%',
+        fontWeight: 'bold',
+    },
+    buttonSelectY: {
+        fontSize: 18,
+        margin: 'center',
+        borderRadius: 20,
+        marginTop: 10,
+        marginLeft: '6%',
+        fontWeight: 'bold',
+    },
+    bullet: {
+        fontSize: '10px',
+        color: '#0288F7',
+        margin: '-5px 5px 5px 0px',
     },
 }));
 
+
 const Pricing = () => {
+
+    const [mPrice, setTextM] = useState("99");
+const [yPrice, setTextY] = useState("150");
+const [mBColour, setMButtonColour] = useState('#24285B');
+const [yBColour, setYButtonColour] = useState('Transparent');
+const [mTColour, setMTextColour] = useState('white');
+const [yTColour, setYTextColour] = useState('black');
+
+
+    function monthlyClick() {
+        setTextM( "99")
+        setTextY( "150")
+        setMButtonColour( "#24285B")
+        setYButtonColour( "Transparent")
+        setMTextColour( "white")
+        setYTextColour( "black")
+      }
+    function yearlyClick() {
+        setTextM( "80")
+        setTextY( "120")
+        setMButtonColour( "Transparent")
+        setYButtonColour( "#24285B")
+        setMTextColour( "black")
+        setYTextColour( "white")
+    }
+      
 
     const classes = useStyles();
 
@@ -186,11 +220,16 @@ const Pricing = () => {
 
       <Grid item xs>
     <Paper className={classes.paperSelect}>
-    <Button variant="contained" color="primary" disableElevation className={classes.buttonSelect}>
+    <Button variant="contained" color="primary" disableElevation className={classes.buttonSelectM}
+    style={{background: mBColour, color: mTColour, fontWeight: 'bold'}}
+    onClick={monthlyClick} >
                         MONTHLY
                         </Button>
 
-    <Button variant="contained" color="primary" disableElevation className={classes.buttonSelect}>
+    <Button variant="contained" color="primary" disableElevation className={classes.buttonSelectY}
+    // style={{background: {yBColour}}}
+    style={{background: yBColour, color: yTColour, fontWeight: 'bold'}}
+    onClick={yearlyClick}>
                         YEARLY
                         </Button>
     </Paper>
@@ -209,7 +248,7 @@ const Pricing = () => {
                 </Typography>
 
                     <Typography className={classes.textPrice}>
-                        $99/mo
+                        ${mPrice}/mo
                 </Typography>
 
                     <Typography className={classes.textMidle}>
@@ -229,19 +268,19 @@ const Pricing = () => {
                 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * 6-Month Data History
+                        <span className={classes.bullet} >{'\u2B24'} </span> 6-Month Data History
                 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * 100% support
+                        <span className={classes.bullet} >{'\u2B24'} </span> 100% support
                 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * Custom Reports
+                        <span className={classes.bullet} >{'\u2B24'} </span> Custom Reports
                 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * Funnel Optimization
+                        <span className={classes.bullet} >{'\u2B24'} </span> Funnel Optimization
                 </Typography>
 
                     <Button variant="contained" color="primary" disableElevation className={classes.button}>
@@ -260,7 +299,7 @@ const Pricing = () => {
 </Typography>
 
                     <Typography className={classes.textPrice}>
-                        $150/mo
+                        ${yPrice}/mo
 </Typography>
 
                     <Typography className={classes.textMidle}>
@@ -278,23 +317,23 @@ const Pricing = () => {
                     </Typography>
 
                     <Typography className={classes.textPointHeader}>
-                        What’s included
+                    Everything in basic +
 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * 1 Year Data History
+                        <span className={classes.bullet} >{'\u2B24'} </span> 1 Year Data History
 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * Journey Analysis
+                        <span className={classes.bullet} >{'\u2B24'} </span> Journey Analysis
 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * 1:1 Onboarding
+                        <span className={classes.bullet} >{'\u2B24'} </span> 1:1 Onboarding
 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * Export Unlimited Smart Audiences
+                        <span className={classes.bullet} >{'\u2B24'} </span> Export Unlimited Smart Audiences
 </Typography>
 
                     <Button variant="contained" color="primary" disableElevation className={classes.button}>
@@ -317,7 +356,9 @@ const Pricing = () => {
 
  <Typography className={classes.textPrice}>
  
-<Button borderRadius="40" disableElevation className={classes.buttonUp}>
+<Button variant="contained" color="primary" disableElevation className={classes.buttonUp}
+style={{background:'Transparent', border: '1px solid black',  color: 'black', borderColor: '#CDD8E0', borderRadius: '60px'}}
+>
 GET IN TOUCH ->
                         </Button>
 </Typography>
@@ -334,30 +375,32 @@ GET IN TOUCH ->
                     </Typography>
 
                     <Typography className={classes.textPointHeader}>
-                        What’s included
+                    Everything in Pro +
 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * 2 Years Data History
+                    <span className={classes.bullet} >{'\u2B24'} </span> 2 Years Data History
 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * Budget Planning
+                        <span className={classes.bullet} >{'\u2B24'} </span> Budget Planning
 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * Advanced User Management
+                        <span className={classes.bullet} >{'\u2B24'} </span> Advanced User Management
 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * Analytics Bootcamp
+                        <span className={classes.bullet} >{'\u2B24'} </span> Analytics Bootcamp
 </Typography>
 
                     <Typography className={classes.textPointText}>
-                        * Export Unlimited Events to Facebook, Google Ads & More
+                        <span className={classes.bullet} >{'\u2B24'} </span> Export Unlimited Events to Facebook, Google Ads & More
 </Typography>
 
-                    <Button variant="contained" color="primary" disableElevation className={classes.button}>
+                    <Button variant="contained" color="primary" disableElevation className={classes.button}
+                    style={{background:'#E4F6FF', color: 'black', borderRadius: '60px'}}
+                    >
                         GET IN TOUCH ->
 </Button>
                 </Paper>
@@ -367,4 +410,5 @@ GET IN TOUCH ->
 }
 
 export default Pricing
+
 
