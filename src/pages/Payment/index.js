@@ -46,15 +46,15 @@ const useStyles = makeStyles((theme) => ({
         boxShadoe: '0px 14px 50px rgba(25, 43, 67, 0.08)',
         borderRadius: 14,
         marginBottom: 30,
-        width: '70%',
+        width: '80%',
 
     },
     paperDRight: {
         padding: theme.spacing(1),
         color: theme.palette.text.secondary,
         marginTop: -90,
-        marginLeft: 10,
-        marginRight: 30,
+        marginLeft: 110,
+        marginRight: 20,
         background: '#FFFFFF',
         boxShadoe: '0px 14px 50px rgba(25, 43, 67, 0.08)',
         borderRadius: 14,
@@ -102,6 +102,13 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 18,
         marginLeft: 25,
         marginTop: 10,
+        color: 'black',
+    },
+    textPointTextB: {
+        fontSize: 18,
+        marginLeft: 25,
+        marginTop: 10,
+        marginBottom: 25,
         color: 'black',
     },
     bullet: {
@@ -230,7 +237,7 @@ const Payment = () => {
                         <span className={classes.bullet} >{'\u2B24'} </span> Custom Reports
                 </Typography>
 
-                    <Typography className={classes.textPointText}>
+                    <Typography className={classes.textPointTextB}>
                         <span className={classes.bullet} >{'\u2B24'} </span> Funnel Optimization
                 </Typography>
 

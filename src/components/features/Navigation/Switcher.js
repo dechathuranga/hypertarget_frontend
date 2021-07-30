@@ -8,7 +8,8 @@ import Home, {
     TestimonialsPage,
     HelpPage,
     LoginPage,
-    PaymentPage
+    PaymentPage,
+    CheckEmailPage
 } from "../../../pages"
 
 const Switcher = () => (
@@ -36,6 +37,9 @@ const Switcher = () => (
         </Route>
         <Route path="/payment">
             <PaymentPage />
+        </Route>
+        <Route path="/checkEmail">
+            <CheckEmailPage />
         </Route>
         <Route path="/">
             <Home />

@@ -7,6 +7,7 @@ import PricingPage from "./Pricing"
 import HelpPage from "./Help"
 import LoginPage from "./Login"
 import PaymentPage from "./Payment"
+import CheckEmailPage from "./CheckEmail"
 
 export default HomePage;
-export { AboutPage, FeaturePage, FeaturesPage, PricingPage, HelpPage, TestimonialsPage, LoginPage, PaymentPage }
+export { AboutPage, FeaturePage, FeaturesPage, PricingPage, HelpPage, TestimonialsPage, LoginPage, PaymentPage, CheckEmailPage }
