@@ -206,7 +206,6 @@ const [yTColour, setYTextColour] = useState('black');
 
     <p className={classes.textHead}>
         Pricing
-        
     </p>
 
     <p className={classes.textHeadDescription}>

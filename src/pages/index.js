@@ -8,6 +8,15 @@ import HelpPage from "./Help"
 import LoginPage from "./Login"
 import PaymentPage from "./Payment"
 import CheckEmailPage from "./CheckEmail"
+import LoginEmailPage from "./LoginEmail"
+import AddSitePage from "./AddSite"
+import SetupPixelPage from "./SetupPixel"
 
 export default HomePage;
-export { AboutPage, FeaturePage, FeaturesPage, PricingPage, HelpPage, TestimonialsPage, LoginPage, PaymentPage, CheckEmailPage }
+export { AboutPage, FeaturePage, FeaturesPage, PricingPage, HelpPage, TestimonialsPage, LoginPage, 
+    PaymentPage, 
+    CheckEmailPage, 
+    LoginEmailPage, 
+    AddSitePage, 
+    SetupPixelPage, 
+}

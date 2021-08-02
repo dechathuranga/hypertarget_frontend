@@ -9,7 +9,10 @@ import Home, {
     HelpPage,
     LoginPage,
     PaymentPage,
-    CheckEmailPage
+    CheckEmailPage,
+    LoginEmailPage,
+    AddSitePage,
+    SetupPixelPage,
 } from "../../../pages"
 
 const Switcher = () => (
@@ -40,6 +43,15 @@ const Switcher = () => (
         </Route>
         <Route path="/checkEmail">
             <CheckEmailPage />
+        </Route>
+        <Route path="/setupPixel">
+            <SetupPixelPage />
+        </Route>
+        <Route path="/addSite">
+            <AddSitePage />
+        </Route>
+        <Route path="/loginEmail">
+            <LoginEmailPage />
         </Route>
         <Route path="/">
             <Home />
