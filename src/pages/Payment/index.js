@@ -153,97 +153,118 @@ const Payment = () => {
     const classes = useStyles();
 
 
-    return <div className={classes.root} >
+    return <div>
 
-    
-        <Grid item xs>
-            <Paper className={classes.paperTop}>
-
-                <p className={classes.textHeadSmall}> Plans > Checkout </p>
-
-
-                <Typography className={classes.textHeader}>
-                    Enter Your Payment Details Below
-                    </Typography>
-
-
-            </Paper>
-        </Grid>
-
-        <Grid container spacing={3}>
-
+        <section className="pay-info-sec bg-bluegradient pt-20 pb-60 ml-16 mr-16">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 text-left" style={{marginLeft:100}}>
+                        <ul className="breadcrumbs">
+                            <li>
+                                <a href>
+                                    Plans >
+                </a>
+                            </li>
+                            <li>
+                                <img src="assets/images/bread-arrow.svg" alt="" />
+                            </li>
+                            <li className="active"><a href>
+                                Checkout
+                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="row justify-content-center">
+                    <div className="col-12 col-md-8 col-lg-8 col-sm-12 text-center">
+                        <h3 className="sec-head white-color mb-20">
+                            Enter Your Payment Details Below
+            </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section className="pay-info-wrap">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <Grid container spacing={2}>
+                        <Grid item xs>
+                            <div className="col-md-7 col-lg-7 col-12 col-sm-12 ml-24" style={{width:500, marginLeft:200 }}>
+                                <div className="c_card">
+                                    <h3 className="head">
+                                        Payment Information
+              </h3>
+                                    <form action>
+                                        <div className="form-group">
+                                            <label htmlFor>Name *</label>
+                                            <div className="c_input-group">
+                                                <input type="text" name placeholder="Enter your full name" id />
+                                            </div>
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor>Email *</label>
+                                            <div className="c_input-group">
+                                                <input type="text" name placeholder="Enter your email address" id />
+                                            </div>
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor>Card Details *</label>
+                                            <div className="c_input-group card-input">
+                                                <img src="assets/images/card-icon.svg" alt="" />
+                                                <input type="text" name placeholder="0000 0000 0000 000" id />
+                                                <div className="card-det">
+                                                    <input type="text" placeholder="MM/YY" />
+                                                    <input type="text" placeholder="CVV" />
+                                                    <input type="text" placeholder="ZIP Code" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" className="c_submit-btn"  >
+                                        <Grid container spacing={2}>
+                        <Grid item xs>
+                                        Submit
+                                        </Grid>
+                                        <Grid item xs>
+                                            <svg style={{marginLeft:0 , marginTop : 4   }}  width={22} height={15} viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.8913 1L20.5 7.5M13.8913 14L20.5 7.5M20.5 7.5H1.5" stroke="#192B43" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                            </Grid>
+                                            </Grid>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            </Grid>
 
             <Grid item xs>
-                <Paper className={classes.paperDLeft}>
+                            <div className="col-lg-4 col-md-4 col-sm-12 col-12 ml-8" >
+                                <div className="price-card c_card">
+                                    <div className="price-header">
+                                        <p className="price-cat">
+                                            You have to pay
+                </p>
+                                        <h4 className="main-price">
+                                            $99/mo
+                </h4>
+                                    </div>
+                                    <div className="price-body">
+                                        <h5 className="head">
+                                            What’s included
+                </h5>
+                                        <ul className="price-inc-list">
+                                            <li>6-Month Data History</li>
+                                            <li>100% support</li>
+                                            <li>Custom Reports</li>
+                                            <li>Funnel Optimization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </div>
+            </div>
+        </section>
 
-                    <Typography className={classes.textDownLabelP}>
-                        Payment Information
-                    </Typography>
-
-                    <label>
-                        <p className={classes.textLabel}> Name* </p>
-                        <input placeholder='Enter Your Full Name' className={classes.field} type="text" name="name" />
-                    </label>
-
-                    
-                    <label>
-                        <p className={classes.textLabel}> Email* </p>
-                        <input placeholder='Enter Your Email Address' className={classes.field} type="text" name="name" />
-                    </label>
-
-                      <label>
-                        <p className={classes.textLabel}> Card Details* </p>
-                        <input 
-                        placeholder= "&#61442; 0000 0000 0000 0000              MM/YY   CVV   ZIP Code"
-                         className={classes.field} type="text" name="name" />
-               
-                    </label>
-
-                      <Button variant="contained" color="primary" disableElevation className={classes.button}
-                      style={{background:'#24285B', color: 'white', borderRadius: '60px',  }}>
-                        SUBMIT  <BsArrowRight  style={{fontSize:'25', marginLeft: 5 }} />
-                     </Button>
-
-                </Paper>
-            </Grid>
-
-            <Grid item xs>
-                <Paper className={classes.paperDRight}>
-
-                    <Typography className={classes.textDownLabel}>
-                        You have to pay
-                    </Typography>
-
-                    <Typography className={classes.textPrice}>
-                        $99/mo
-                     </Typography>
-
-                    <Typography className={classes.textLine}>
-                        <hr class="mt-0" ></hr>
-                    </Typography>
-                    <Typography className={classes.textPointHeader}>
-                        What’s included
-                </Typography>
-
-                    <Typography className={classes.textPointText}>
-                        <span className={classes.bullet} >{'\u2B24'} </span> 6-Month Data History
-                </Typography>
-
-                    <Typography className={classes.textPointText}>
-                        <span className={classes.bullet} >{'\u2B24'} </span> 100% support
-                </Typography>
-
-                    <Typography className={classes.textPointText}>
-                        <span className={classes.bullet} >{'\u2B24'} </span> Custom Reports
-                </Typography>
-
-                    <Typography className={classes.textPointTextB}>
-                        <span className={classes.bullet} >{'\u2B24'} </span> Funnel Optimization
-                </Typography>
-
-                </Paper>
-            </Grid>
-        </Grid>
     </div>
 }
 

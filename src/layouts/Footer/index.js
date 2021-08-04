@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         // flexGrow: 1,
         // margin: 25,
-        backgroundColor: 'white'
+        backgroundColor: '#F8F8F8'
     },
     paper: {
         // padding: theme.spacing(2),

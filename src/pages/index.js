@@ -9,6 +9,7 @@ import LoginPage from "./Login"
 import PaymentPage from "./Payment"
 import CheckEmailPage from "./CheckEmail"
 import LoginEmailPage from "./LoginEmail"
+import DashboardPage from "./Dashboard"
 import AddSitePage from "./AddSite"
 import SetupPixelPage from "./SetupPixel"
 
@@ -19,4 +20,5 @@ export { AboutPage, FeaturePage, FeaturesPage, PricingPage, HelpPage, Testimonia
     LoginEmailPage, 
     AddSitePage, 
     SetupPixelPage, 
+    DashboardPage, 
 }
