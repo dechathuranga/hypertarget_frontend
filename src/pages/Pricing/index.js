@@ -282,7 +282,7 @@ const [yTColour, setYTextColour] = useState('black');
                         <span className={classes.bullet} >{'\u2B24'} </span> Funnel Optimization
                 </Typography>
 
-                    <Button variant="contained" color="primary" disableElevation className={classes.button}>
+                    <Button href="/payment" variant="contained" color="primary" disableElevation className={classes.button}>
                         ADD TO CARD
     </Button>
                 </Paper>
@@ -335,7 +335,7 @@ const [yTColour, setYTextColour] = useState('black');
                         <span className={classes.bullet} >{'\u2B24'} </span> Export Unlimited Smart Audiences
 </Typography>
 
-                    <Button variant="contained" color="primary" disableElevation className={classes.button}>
+                    <Button href="/payment" variant="contained" color="primary" disableElevation className={classes.button}>
                         ADD TO CARD
 </Button>
                 </Paper>
@@ -355,7 +355,7 @@ const [yTColour, setYTextColour] = useState('black');
 
  <Typography className={classes.textPrice}>
  
-<Button variant="contained" color="primary" disableElevation className={classes.buttonUp}
+<Button href="/payment" variant="contained" color="primary" disableElevation className={classes.buttonUp}
 style={{background:'Transparent', border: '1px solid black',  color: 'black', borderColor: '#CDD8E0', borderRadius: '60px'}}
 >
 GET IN TOUCH ->

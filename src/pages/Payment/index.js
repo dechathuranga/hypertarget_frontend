@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState,Component } from "react"
 import { Link } from "react-router-dom"
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { BsArrowRight } from 'react-icons/bs';
+import './../../assets/main.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -148,12 +149,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const Payment = () => {
+// const Payment = () => {
+    class Payment extends Component {
 
-    const classes = useStyles();
+    // const classes = useStyles();
 
-
-    return <div>
+    render() {
+        return <div class="bg-lightblue" >
 
         <section className="pay-info-sec bg-bluegradient pt-20 pb-60 ml-16 mr-16">
             <div className="container">
@@ -218,7 +220,7 @@ const Payment = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" className="c_submit-btn"  >
+                                        <button  href="/checkEmail" type="submit" className="c_submit-btn"  >
                                         <Grid container spacing={2}>
                         <Grid item xs>
                                         Submit
@@ -267,6 +269,7 @@ const Payment = () => {
 
     </div>
 }
+    }
 
 export default Payment
 

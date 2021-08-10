@@ -14,6 +14,7 @@ import Home, {
     AddSitePage,
     SetupPixelPage,
     DashboardPage,
+    UserJourneyPage,
 } from "../../../pages"
 
 const Switcher = () => (
@@ -53,6 +54,9 @@ const Switcher = () => (
         </Route>
         <Route path="/loginEmail">
             <LoginEmailPage />
+        </Route>
+        <Route path="/UserJourney">
+            <UserJourneyPage />
         </Route>
         <Route path="/dashboard">
             <DashboardPage />

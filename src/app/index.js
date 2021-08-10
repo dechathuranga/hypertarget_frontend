@@ -10,11 +10,11 @@ class App extends React.Component {
     render() {
         return (<div>
             <Router >
-                <Header />
+                {/* <Header /> */}
                 <Switcher />
-                <HeaderMobile forMobile={true} />
-                <FooterMobile forMobile={true} />
-                <Footer />
+                {/* <HeaderMobile forMobile={true} /> */}
+                {/* <FooterMobile forMobile={true} /> */}
+                {/* <Footer /> */}
             </Router>
         </div>
         )

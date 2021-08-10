@@ -12,6 +12,7 @@ import LoginEmailPage from "./LoginEmail"
 import DashboardPage from "./Dashboard"
 import AddSitePage from "./AddSite"
 import SetupPixelPage from "./SetupPixel"
+import UserJourneyPage from "./UserJourney"
 
 export default HomePage;
 export { AboutPage, FeaturePage, FeaturesPage, PricingPage, HelpPage, TestimonialsPage, LoginPage, 
@@ -21,4 +22,5 @@ export { AboutPage, FeaturePage, FeaturesPage, PricingPage, HelpPage, Testimonia
     AddSitePage, 
     SetupPixelPage, 
     DashboardPage, 
+    UserJourneyPage, 
 }
